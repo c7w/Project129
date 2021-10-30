@@ -2047,6 +2047,11 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/underscore@^1.11.3":
+  version "1.11.3"
+  resolved "https://registry.nlark.com/@types/underscore/download/@types/underscore-1.11.3.tgz#d6734f3741ce41b2630018c6b61c6745f6188c07"
+  integrity sha1-1nNPN0HOQbJjABjGthxnRfYYjAc=
+
 "@types/webpack-sources@*":
   version "3.2.0"
   resolved "https://registry.nlark.com/@types/webpack-sources/download/@types/webpack-sources-3.2.0.tgz?cache=0&sync_timestamp=1629709779161&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fwebpack-sources%2Fdownload%2F%40types%2Fwebpack-sources-3.2.0.tgz#16d759ba096c289034b26553d2df1bf45248d38b"
@@ -10932,6 +10937,11 @@ unbox-primitive@^1.0.1:
     has-bigints "^1.0.1"
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
+
+underscore@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.npm.taobao.org/underscore/download/underscore-1.13.1.tgz#0c1c6bd2df54b6b69f2314066d65b6cde6fcf9d1"
+  integrity sha1-DBxr0t9UtrafIxQGbWW2zeb8+dE=
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"

@@ -1,0 +1,183 @@
+.Game {
+    position: fixed;
+    left: 5%;
+    height: 100%;
+    width: min(90%, 500px);
+    margin: 0 auto;
+}
+
+.Game:before {
+    /* bg */
+    background-image: url("https://i.loli.net/2021/10/30/wH5AB9ucvsJtaog.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    content: "";
+    z-index: -1;
+}
+
+.Start {
+    transition: all 1s ease-out;
+    opacity: 1;
+}
+
+
+.Start:before {
+    /* start */
+    background-image: url("https://i.loli.net/2021/10/30/d3gHqXtWQUiaSBz.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    content: "";
+    z-index: 1;
+}
+
+/* Result */
+.Result {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ResultStats {
+    position: relative;
+    
+    padding: 1rem;
+    width: 80%;
+
+    height: calc(50vh);
+    
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ResultInput {
+    position: relative;
+    height: calc(12vh);
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ResultInput .p {
+    text-align: center;
+}
+
+#ResultName {
+    height: 2rem;
+    text-align: center;
+    margin: 1rem auto;
+    width: 90%;
+    border: none;
+    border-bottom: 1px black solid;
+    background-color: rgba(255,255,255,0);
+    font-size: 1.5rem;
+}
+
+.ResultReport {
+    position: relative;
+    background-color: rgba(0,255,0,0.8);
+    cursor: pointer;
+    padding: 0.2rem;
+    width: 50%;
+    height: calc(10vh);
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Question */
+
+.QuestionBlock {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.QuestionDescription {
+    position: relative;
+    top: 5%;
+    left: 5%;
+    width: 80%;
+    font-size: 1.2rem;
+    height: 20%;
+    background-color: rgba(255,255,255,0.7);
+    padding: 1rem;
+    border-radius: 2rem;
+    
+
+}
+
+.QuestionOptions {
+    position: relative;
+    top: 12%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    height: 60%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.QuestionOption {
+    margin: 0.6rem auto;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.9);
+    width: 75%;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+
+}
