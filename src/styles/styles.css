@@ -1,3 +1,5 @@
+* { -webkit-tap-highlight-color: transparent }
+
 .Game {
     position: fixed;
     left: 5%;
@@ -8,7 +10,7 @@
 
 .Game:before {
     /* bg */
-    background-image: url("https://i.loli.net/2021/10/30/wH5AB9ucvsJtaog.jpg"); 
+    background-image: url("../assets/images/bg.png"); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,21 +19,22 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0%;
+    left: 0%;;
     right: 0%;
     content: "";
     z-index: -1;
 }
 
 .Start {
-    transition: all 1s ease-out;
+    width: min(90%, 500px);
+    transition: all 1.5s ease-out;
     opacity: 1;
 }
 
 
 .Start:before {
     /* start */
-    background-image: url("https://i.loli.net/2021/10/30/d3gHqXtWQUiaSBz.jpg");
+    background-image: url("../assets/images/start.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,16 +48,52 @@
     z-index: 1;
 }
 
+@media screen and (min-width: 500px) {
+    .Game:before {
+    /* bg */
+    background-image: url("../assets/images/bg.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(50vw - 250px);
+    right: calc(50vw - 250px);
+    content: "";
+    z-index: -1;
+    }
+
+    .Start:before {
+        /* start */
+        background-image: url("../assets/images/start.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: calc(50vw - 250px);
+        right: calc(50vw - 250px);
+        content: "";
+        z-index: 1;
+    }
+}
+
+
+
 /* Result */
 .Result {
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    width: 90%;
-    height: 90%;
+    position: fixed;
+    left: max(5vw, 50vw - 225px);
+    right: max(5vw, 50vw - 225px);
+    top: 5vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.4);
     border-radius: 2rem;
     justify-content: space-around;
     align-items: center;
@@ -69,7 +108,6 @@
     height: calc(50vh);
     
     margin: 0 auto;
-    background-color: rgba(255,255,255,0.4);
     border-radius: 2rem;
 
     display: flex;
@@ -77,16 +115,22 @@
     justify-content: center;
     align-items: center;
 
+    font-family: fz;
+    color: rgb(56,16,13);
+
 }
 
 .ResultInput {
     position: relative;
     height: calc(12vh);
-    background-color: rgba(255,255,255, 0.4);
     border-radius: 2rem;
     padding: 1rem;
     width: 80%;
     margin: 0 auto;
+
+    font-family: fz;
+    color: rgb(56,16,13);
+
 
     display: flex;
     flex-direction: column;
@@ -107,6 +151,13 @@
     border-bottom: 1px black solid;
     background-color: rgba(255,255,255,0);
     font-size: 1.5rem;
+    font-family: fz;
+
+    color: rgb(56,16,13);
+}
+
+.ResultImage {
+    max-height: 45vh;
 }
 
 .ResultReport {
@@ -130,53 +181,59 @@
 /* Question */
 
 .QuestionBlock {
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    width: 90%;
-    height: 90%;
+    position: fixed;
+    left: max(5vw, 50vw - 225px);
+    right: max(5vw, 50vw - 225px);
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.4);
     border-radius: 2rem;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+
+    opacity: inherit;
+    /* transition: all 1.5s ease-in; */
+}
+
+@font-face {
+    font-family: fz;
+    src: url("../assets/font.ttf");
 }
 
 .QuestionDescription {
     position: relative;
-    top: 5%;
-    left: 5%;
     width: 80%;
     font-size: 1.2rem;
-    height: 20%;
-    background-color: rgba(255,255,255,0.7);
+    height: 15%;
     padding: 1rem;
     border-radius: 2rem;
-    
+    font-family: fz;
+    color: rgb(56,16,13);
 
 }
 
 .QuestionOptions {
     position: relative;
-    top: 12%;
     margin: 0 auto;
     padding: 1rem;
-    font-size: 1.2rem;
-    height: 60%;
+    font-size: 1.05rem;
+    height: 50%;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: fz;
+    
+
+    color: rgb(56,16,13);
 }
 
 .QuestionOption {
     margin: 0.6rem auto;
     padding: 1rem;
-    background-color: rgba(255,255,255,0.9);
-    width: 75%;
-    text-align: center;
+    width: 80%;
+    text-align: left;
     border-radius: 2rem;
     cursor: pointer;
 

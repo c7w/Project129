@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { updateContentStatus } from "../app/store";
 
 const StartGame = ()=>{
     const [op, setOp] = useState(1);
     const [dis, setDis] = useState('block');
+    const dispatch = useDispatch();
     return <div 
         className="Start" 
         style={{
@@ -14,7 +17,7 @@ const StartGame = ()=>{
         }} 
         onClick={()=>{
             setOp(0); 
-            setTimeout(()=>{setDis('none')}, 1000);
+            setTimeout(()=>{setDis('none'); dispatch(updateContentStatus(1))}, 1500);
         }} 
     />
 };
