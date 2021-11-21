@@ -1,11 +1,10 @@
-import { Fragment, useEffect, useRef, useState } from "react";
-import { Layer, Rect, Stage, Image, Text } from "react-konva";
+import { Fragment, useEffect, useRef } from "react";
+import { Layer, Stage, Image, Text } from "react-konva";
 import { useSelector } from "react-redux";
-import useImage from 'use-image';
 import { getRenderReport, getScore, getUsername } from "../app/store";
 
 import r101 from "../assets/report_templates/文人.png";
-import r102 from "../assets/report_templates/学者.png";
+import r102 from "../assets/report_templates/学生领袖.png";
 import r103 from "../assets/report_templates/军人.png";
 import r104 from "../assets/report_templates/学者.png";
 import r105 from "../assets/report_templates/普通人.png";
@@ -15,11 +14,6 @@ import QR from "../assets/QR.png"
 interface ReportProps {
     username: string;
 }
-
-const MyImage = () => {
-  const [image] = useImage("../assets/report_templates/文人.png");
-  return <Image image={image} />;
-};
 
 const Report = (props: ReportProps) => {
 
