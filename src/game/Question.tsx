@@ -32,7 +32,7 @@ const Question = (props: QuestionProps) => {
 
                 // 然后过一秒再处理翻页
                 setTimeout(()=>{
-                    event.target.style.setProperty('color', 'black')
+                    event.target.style.setProperty('color', 'rgb(56,16,13)')
                     const newScoreSheet = option.next(scoreSheet);
                     if(newScoreSheet.next > 100) {
                         dispatch(updateContentStatus(2));
@@ -47,8 +47,6 @@ const Question = (props: QuestionProps) => {
         </div>)
     j++;
     }
-
-    console.debug(11233);
 
 
     return (<div id={"QuestionBlock"} 

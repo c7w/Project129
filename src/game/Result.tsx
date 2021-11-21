@@ -1,6 +1,6 @@
 import { ChangeEvent, ReactElement, useState } from "react";
-import { useSelector } from "react-redux";
-import { getScore } from "../app/store";
+import { useDispatch, useSelector } from "react-redux";
+import { getRenderReport, getScore, updateReport, updateUsername } from "../app/store";
 
 import c101 from "../assets/characters/文人.png";
 import c102 from "../assets/characters/学生.png";
@@ -13,10 +13,11 @@ import c105 from "../assets/characters/普通人.png";
 const Result = ()=>{
 
     const scoreSheet = useSelector(getScore);
-    const [name, setName] = useState("");
+    const dispatch = useDispatch();
     const onInputChange = (event: ChangeEvent<HTMLInputElement>) : void=>{
-        setName(event.target.value);
+        dispatch(updateUsername(event.target.value));
     }
+    const report = useSelector(getRenderReport);
 
     let desp = ""
     let character : ReactElement = <></>;
@@ -46,18 +47,19 @@ const Result = ()=>{
     return <div className="Result">
         <div className="ResultStats">
             <p>一二·九的你，是——</p>
-            <p style={{fontSize: '1.8rem'}}>{desp}</p>
+            <p style={{fontSize: '1.8rem', margin: '0 auto'}}>{desp}</p>
             {character}
         </div>
         <div className="ResultInput">
-            <p>请在下方输入您的名字</p>
+            <p style={{marginBottom: '0.1rem'}}>请在下方输入您的名字</p>
             <input id="ResultName" onChange = {onInputChange}></input>
         </div>
         <div className="ResultReport" onClick={()=>{
-            console.debug(123); 
-            alert('报告还没做' + name);
-            }}>
-            <p>获取专属报告</p>
+            dispatch(updateReport(report+1));
+            document.getElementById("Report")?.style.setProperty("display", 'block');
+            
+        }}>
+            <p>点我生成专属报告</p>
         </div>
         
     </div>
