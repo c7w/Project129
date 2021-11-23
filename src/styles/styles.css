@@ -197,10 +197,7 @@
     /* transition: all 1.5s ease-in; */
 }
 
-@font-face {
-    font-family: fz;
-    src: url("../assets/font.ttf");
-}
+
 
 .QuestionDescription {
     position: relative;

@@ -21,7 +21,7 @@ const Report = (props: ReportProps) => {
 
     useEffect(()=>{
         if(renderReport) {
-            updateReport(username, scoreSheet.next);
+            updateReport(scoreSheet.next);
         }
     }, [renderReport]);
 

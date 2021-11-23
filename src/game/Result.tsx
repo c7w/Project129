@@ -52,11 +52,10 @@ const Result = ()=>{
         </div>
         <div className="ResultInput">
             <p style={{marginBottom: '0.1rem'}}>请在下方输入您的名字</p>
-            <input id="ResultName" onChange = {onInputChange}></input>
+            <input id="ResultName"></input>
         </div>
         <div className="ResultReport" onClick={()=>{
             dispatch(updateReport(report+1));
-            document.getElementById("Report")?.style.setProperty("display", 'block');
             
         }}>
             <p>点我生成专属报告</p>
