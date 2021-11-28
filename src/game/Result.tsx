@@ -14,9 +14,6 @@ const Result = ()=>{
 
     const scoreSheet = useSelector(getScore);
     const dispatch = useDispatch();
-    const onInputChange = (event: ChangeEvent<HTMLInputElement>) : void=>{
-        dispatch(updateUsername(event.target.value));
-    }
     const report = useSelector(getRenderReport);
 
     let desp = ""

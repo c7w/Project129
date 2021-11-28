@@ -28,7 +28,9 @@ const Report = (props: ReportProps) => {
     return (
         <div className="Report" id="Report" style={{display: 'none'}} >
             <span className="ReportClose" onClick={()=>{var c; document.getElementById('Report')?.style.setProperty('display', 'none'); clearInterval(c);}}>×</span>
-            <img alt="Report" id="ReportImage" src="" style={{userSelect: 'all'}}></img>
+            <div style={{height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                <img alt="Report" id="ReportImage" src="" style={{userSelect: 'all'}}></img>
+            </div>
             {/* <Fragment>
                 <Stage width={1624} height={2648} style={{display: 'none'}} ref={stageRef} >
                     <Layer>

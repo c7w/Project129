@@ -27,7 +27,7 @@
 
 .Start {
     width: min(90%, 500px);
-    transition: all 1.5s ease-out;
+    transition: all 0.9s ease-out;
     opacity: 1;
 }
 
@@ -226,7 +226,7 @@
 
 .QuestionOption {
     margin: 0.6rem auto;
-    width: 85%;
+    width: min(300px, 60vw);
     line-height: 1.5rem;
     text-align: left;
     border-radius: 2rem;

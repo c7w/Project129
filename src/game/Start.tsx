@@ -17,7 +17,7 @@ const StartGame = ()=>{
         }} 
         onClick={()=>{
             setOp(0); 
-            setTimeout(()=>{setDis('none'); dispatch(updateContentStatus(1))}, 1500);
+            setTimeout(()=>{setDis('none'); dispatch(updateContentStatus(1))}, 900);
         }} 
     />
 };
