@@ -153,6 +153,8 @@
     font-size: 1.5rem;
     font-family: fz;
 
+    user-select: all;
+
     color: rgb(56,16,13);
 }
 
