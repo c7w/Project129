@@ -1,7 +1,7 @@
 const notifyStart = () => {
     fetch("http://121.5.165.232:10129/api/start", {method: 'POST', headers: {
       'Content-Type': 'application/json'
-    }, body: ''}, )
+    }, body: '', mode: 'cors'}, )
         .then(response => response.json())
         .then(data => {});
 };
@@ -12,7 +12,7 @@ const notifyResult = (result: number) => {
         headers: {
             'Content-Type': 'application/json'
         }, 
-        body: JSON.stringify({result: result})
+        body: JSON.stringify({result: result}), mode: 'cors'
     }, )
         .then(response => response.json())
         .then(data => {});
