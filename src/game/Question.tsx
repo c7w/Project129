@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import _ from "underscore";
 import { getScore, getSelected, updateContentStatus, updateScore, updateSelected } from "../app/store";
+import { notifyResult } from "../utils/Network";
 import QUESTIONS, { Option } from "./Text";
 
 interface QuestionProps {
@@ -35,6 +36,7 @@ const Question = (props: QuestionProps) => {
                     event.target.style.setProperty('color', 'rgb(56,16,13)')
                     const newScoreSheet = option.next(scoreSheet);
                     if(newScoreSheet.next > 100) {
+                        notifyResult(newScoreSheet.next);
                         dispatch(updateContentStatus(2));
                     }
                     dispatch(updateScore(newScoreSheet));
