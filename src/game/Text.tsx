@@ -55,13 +55,7 @@ const QUESTIONS : Array<Question>= [
                 }
             },
             {
-                option: "觉得跟自己关系不大",
-                next: (curr: ScoreSheet)=> {
-                    return { Class1: curr.Class1 - 1, Class2: curr.Class2, next: 3}
-                }
-            },
-            {
-                option: "想起还有DDL，溜了溜了",
+                option: "感觉与自己关系并不大，还是努力学习最重要",
                 next: (curr: ScoreSheet)=> {
                     return { Class1: curr.Class1 - 1, Class2: curr.Class2, next: 3}
                 }
@@ -78,7 +72,7 @@ const QUESTIONS : Array<Question>= [
         question: "北平学联成员正在派发传单，号召同学进行游行请愿，反对一切伪组织、伪自治。你：",
         options: [
             {
-                option: "正在与对象约会，回头再看吧",
+                option: "马上去上课了，下次再看！",
                 next: (curr: ScoreSheet)=> {
 					const next = curr.Class1-1> 0 ? (4) : (6)
                     return { Class1: curr.Class1 - 1, Class2: curr.Class2, next }
@@ -131,7 +125,7 @@ const QUESTIONS : Array<Question>= [
         ]
     },
 	{
-        question: "一二九运动落幕，校方和老师着手组织恢复教学，否则会对学生进行退学处理。你的态度是：",
+        question: "“一二·九”运动落幕，校方和老师着手组织恢复教学，否则会对学生进行退学处理。你的态度是：",
         options: [
             {
                 option: "目标没有实现，坚持停课，抗争到底 ",
@@ -156,7 +150,7 @@ const QUESTIONS : Array<Question>= [
         ]
     },
 	{
-        question: "一二九期间你目睹了很多事，对中国的社会现实有了更深入的了解。其中你印象最深刻的是：",
+        question: "“一二·九”期间你目睹了很多事，对中国的社会现实有了更深入的了解。其中你印象最深刻的是：",
         options: [
             {
                 option: "军警暴力镇压学生运动，致使数百人受伤",
@@ -171,7 +165,7 @@ const QUESTIONS : Array<Question>= [
                 }
             },
             {
-                option: "我是谁？我在哪？我什么都不记得了",
+                option: "具体细节印象不深了",
                 next: (curr: ScoreSheet)=> {
                     return { Class1: curr.Class1 , Class2: curr.Class2, next: 105}
                 }
@@ -179,7 +173,7 @@ const QUESTIONS : Array<Question>= [
         ]
     },
 	{
-        question: "一二九运动对你产生极大触动，深深影响了你未来的职业规划，你决定：",
+        question: "“一二·九”运动对你产生极大触动，深深影响了你未来的职业规划，你决定：",
         options: [
             {
                 option: "深耕学术，用知识缝制铠甲将来披甲上阵",
@@ -196,7 +190,7 @@ const QUESTIONS : Array<Question>= [
                 }
             },
             {
-                option: "尚不明确，努力活着才能为祖国健康工作五十年",
+                option: "尚不明确，努力锻炼，为祖国健康工作五十年",
                 next: (curr: ScoreSheet)=> {
                     return { Class1: curr.Class1 , Class2: curr.Class2, next: 105}
                 }
